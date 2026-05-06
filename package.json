@@ -1,0 +1,35 @@
+{
+  "name": "ai-playwright-framework",
+  "version": "1.0.0",
+  "description": "AI-powered Playwright QA framework with MCP server. Zero manual test coding.",
+  "type": "module",
+  "scripts": {
+    "mcp:start": "node mcp-server/index.js",
+    "gen:pom": "node scripts/gen-pom.js",
+    "gen:tests": "node scripts/gen-tests.js",
+    "generate": "npm run gen:pom && npm run gen:tests",
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "analyze": "node scripts/analyze-failures.js",
+    "full": "npm run generate && npm test",
+    "report": "playwright show-report reports/playwright-report",
+    "allure:generate": "allure generate allure-results --clean -o allure-report",
+    "allure:open": "allure open allure-report",
+    "allure:serve": "allure serve allure-results",
+    "report:bugs": "node scripts/analyze-and-report.js",
+    "test:report-bugs": "playwright test; node scripts/analyze-and-report.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.24.0",
+    "@modelcontextprotocol/sdk": "^0.6.0",
+    "dotenv": "^16.4.5",
+    "fs-extra": "^11.2.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.44.0",
+    "allure-commandline": "^2.38.1",
+    "allure-playwright": "^3.7.1"
+  }
+}

@@ -1,0 +1,14 @@
+node_modules/
+.env
+reports/playwright-report/
+reports/last-run.json
+reports/ai-analysis/
+test-results/
+playwright/.cache/
+.DS_Store
+*.log
+.mcp.json
+allure-results/
+allure-report/
+.playwright-mcp/
+*.png
