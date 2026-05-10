@@ -19,10 +19,4 @@ Brief context on why this change is needed
 - Group related changes together
 - Mention any files deleted or renamed
 
-## Testing
-- List specific test scenarios or commands to verify changes (e.g., `npm test`, `npm run test:headed`)
-- For test/POM changes: include command to regenerate (`npm run generate`)
-- For page instructions: show which test features are affected
-- Include test coverage or Allure report results if applicable
-
 Keep descriptions concise. Focus on what a reviewer needs to know.
